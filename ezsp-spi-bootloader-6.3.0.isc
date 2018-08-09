@@ -1,0 +1,65 @@
+#ISD afv6
+# Simplicity Studio version: 4.27.4.201806291938-1240
+
+# Application configuration
+appId: bootloader
+frameworkRoot: platform\bootloader
+architecture: efr32~family[M]~series[1]~device_configuration[1]~performance[P]~radio[132]~flash[256K]~temp[G]~package[M]~pins[48]+BRD4300B+gcc
+exactArchitectureToolchain: com.silabs.ss.tool.ide.arm.toolchain.gnu.cdt:4.9.3.20150529
+deviceName: ezsp-spi-bootloader-6.3.0
+sourceSampleAppId: bootloader-spi-ezsp
+generationDirectory: PATH(ISC_RELATIVE):.
+
+# Devices
+
+# Plugin configuration
+appPlugin: bgapi-uart-dfu=false
+appPlugin: core=true
+appPlugin: crc=true
+appPlugin: crypto=true
+appPlugin: debug=false
+appPlugin: delay-driver=true
+appPlugin: emlib=true
+appPlugin: ezsp-spi=true
+appPlugin: gbl-compression-lz4=false
+appPlugin: gbl-compression-lzma=false
+appPlugin: gpio-activation=true
+appPlugin: internal_flash=false
+appPlugin: mbedtls=true
+appPlugin: parser=true
+appPlugin: parser-eblv2=false
+appPlugin: parser-noenc=false
+appPlugin: spi-driver=false
+appPlugin: spiflash=false
+appPlugin: spislave-driver=true
+appPlugin: storage-common=false
+appPlugin: storage-common-single=false
+appPlugin: token-management=true
+appPlugin: uart-driver=false
+appPlugin: xmodem-parser=true
+appPlugin: xmodem-uart=false
+
+# Setup configurations
+{setupId:additionalFiles
+}
+{setupId:bootloaderStorage
+}
+{setupId:callbackConfiguration
+}
+{setupId:hwConfig
+lastArchitectureId=efr32~family[M]~series[1]~device_configuration[1]~performance[P]~radio[132]~flash[256K]~temp[G]~package[M]~pins[48]+BRD4300B+gcc
+featureLevel=1
+active=true
+lastHwConfFileUsed=PATH(STACK_RELATIVE):app/builder/ezsp-spi-bootloader-6.3.0/brd4300b_efr32mg1p132f256gm48.hwconf
+}
+{setupId:information
+\{key:description
+
+\}
+}
+{setupId:macros
+}
+{setupId:template
+}
+
+# Plugin options
